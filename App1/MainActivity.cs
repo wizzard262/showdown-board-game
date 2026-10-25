@@ -35,6 +35,33 @@ namespace Showdown
             localWebView.Settings.AllowFileAccessFromFileURLs = true;
             localWebView.Settings.AllowUniversalAccessFromFileURLs = true;
             localWebView.LoadUrl("file:///android_asset/index.html");
+            HideSystemBars();
+        }
+
+        // Full screen: the status and navigation bars hide again whenever the game comes back into focus
+        public override void OnWindowFocusChanged(bool hasFocus)
+        {
+            base.OnWindowFocusChanged(hasFocus);
+            if (hasFocus)
+                HideSystemBars();
+        }
+
+        // Hide the status and navigation bars; a swipe from the edge shows them for a moment
+        void HideSystemBars()
+        {
+            if (System.OperatingSystem.IsAndroidVersionAtLeast(30))
+            {
+                Window.InsetsController?.Hide(WindowInsets.Type.SystemBars());
+                if (Window.InsetsController != null)
+                    Window.InsetsController.SystemBarsBehavior = (int)WindowInsetsControllerBehavior.ShowTransientBarsBySwipe;
+            }
+            else
+            {
+#pragma warning disable CA1422 // the old way, for Android 7 to 10
+                Window.DecorView.SystemUiFlags = SystemUiFlags.ImmersiveSticky | SystemUiFlags.Fullscreen | SystemUiFlags.HideNavigation
+                    | SystemUiFlags.LayoutStable | SystemUiFlags.LayoutFullscreen | SystemUiFlags.LayoutHideNavigation;
+#pragma warning restore CA1422
+            }
         }
 
         [SupportedOSPlatform("android30.0")]

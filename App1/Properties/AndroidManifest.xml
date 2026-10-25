@@ -4,5 +4,5 @@
 		<!-- Android 16 ignores the portrait lock on tablets and foldables; this keeps the game landscape there (honoured while targeting API 36) -->
 		<property android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY" android:value="true" />
 	</application>
-	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- no permissions: the whole game is in the app and never goes online -->
 </manifest>
