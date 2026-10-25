@@ -6,7 +6,7 @@ A .NET 10 Android app that shows the game (`App1/Assets`, plain JavaScript and P
 
 ## Status
 
-- **Done:** the app (`com.harriercarrier.showdown`), landscape
+- **Done:** the app (`com.harriercarrier.futurecitybattle`), landscape
 - **Done:** the theme engine: graphics, sounds and words come from a theme (see `App1/Assets/README.md`)
 - **Done:** the first theme, **Future City Battle** (cyberpunk: Enforcers vs Neon Gangs), every graphic and sound made in code, in a blocky toy style
 - **Done:** the app icon, drawn in code (`tools/make-icons.js`)

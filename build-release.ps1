@@ -1,4 +1,4 @@
-﻿# Builds the signed .aab to upload to Google Play (com.harriercarrier.showdown; Google holds the app signing key, this is the upload key).
+﻿# Builds the signed .aab to upload to Google Play (com.harriercarrier.futurecitybattle; Google holds the app signing key, this is the upload key).
 # For now it uses the Harrier Carrier upload key (Play allows one upload key for several apps); give Showdown its own before the first upload if wanted.
 # The upload keystore and its password live in Azure Key Vault kv-wizzard262 (secrets harriercarrier-upload-jks, harriercarrier-upload-password),
 # so nothing secret sits in the project file or git. Needs `az login`. If the vault can't be read, it falls back to the local keystore and asks for the password.

@@ -1,6 +1,6 @@
 # Google Play listing: Showdown
 
-Package `com.harriercarrier.showdown`. Pictures in this folder (remake with `tools/make-icons.js` and `tools/make-store-art.js`).
+Package `com.harriercarrier.futurecitybattle`. Pictures in this folder (remake with `tools/make-icons.js` and `tools/make-store-art.js`).
 
 | Field | Value |
 |---|---|

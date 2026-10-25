@@ -10,7 +10,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
 
-    <ApplicationId>com.harriercarrier.showdown</ApplicationId>
+    <ApplicationId>com.harriercarrier.futurecitybattle</ApplicationId>
     <!-- Bump ApplicationVersion for every Play upload: it must be higher than any version code already on Play -->
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
