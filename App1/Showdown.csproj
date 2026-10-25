@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- net10.0-android targets Android 16 (API 36), which Google Play requires for updates from Aug 31 2026 -->
+    <TargetFramework>net10.0-android</TargetFramework>
+    <!-- 24 (Android 7.0): Play automatic protection needs at least 24 -->
+    <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Showdown</RootNamespace>
+    <AssemblyName>Showdown</AssemblyName>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <ApplicationId>com.harriercarrier.showdown</ApplicationId>
+    <!-- Bump ApplicationVersion for every Play upload: it must be higher than any version code already on Play -->
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <!-- Signing: pass the upload keystore on the command line (see build-release.ps1). Never commit passwords here. -->
+    <AndroidKeyStore Condition="'$(AndroidSigningKeyStore)' != ''">true</AndroidKeyStore>
+  </PropertyGroup>
+
+  <!-- Everything in Assets\ goes in the app by default. Leave out what the game doesn't use: notes, picture sources, spare font copies -->
+  <ItemGroup>
+    <AndroidAsset Remove="Assets\README.md;Assets\assets\dead_dev\**;Assets\assets\test.js;Assets\**\*.old;Assets\**\*.pdn;Assets\assets\font\*.pretiny*.png" />
+  </ItemGroup>
+</Project>
