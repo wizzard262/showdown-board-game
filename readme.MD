@@ -20,6 +20,14 @@ A .NET 10 Android app that shows the game (`App1/Assets`, plain JavaScript and P
 | `App1/Showdown.csproj` | App id, version, and which files in `Assets` are left out of the app |
 | `build-release.ps1` | Builds the signed `.aab` for Google Play (reads the upload key from Azure Key Vault) |
 
+## Playing it online
+
+Live on GitHub Pages: https://wizzard262.github.io/showdown-board-game/. Pages serves the `gh-pages` branch, which holds only `App1/Assets`. After pushing `main`, publish the game with:
+
+```
+git subtree push --prefix App1/Assets origin gh-pages
+```
+
 ## Running the game in a browser
 
 In `App1/Assets`, run:
