@@ -22,7 +22,7 @@ A .NET 10 Android app that shows the game (`App1/Assets`, plain JavaScript and P
 
 ## Playing it online
 
-Live on GitHub Pages: https://wizzard262.github.io/showdown-board-game/. Pages serves the `gh-pages` branch, which holds only `App1/Assets`. After pushing `main`, publish the game with:
+Live on GitHub Pages: https://wizzard262.github.io/future-city-battle/. Pages serves the `gh-pages` branch, which holds only `App1/Assets`. After pushing `main`, publish the game with:
 
 ```
 git subtree push --prefix App1/Assets origin gh-pages

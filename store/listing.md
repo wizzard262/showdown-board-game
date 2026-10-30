@@ -8,7 +8,7 @@ Package `com.harriercarrier.futurecitybattle`. Pictures in this folder (remake w
 | Category | Game → Board |
 | Price | Free, no ads, no in-app purchases |
 | Privacy policy | https://www.harriercarrier.com/showdown-privacy.html |
-| Website | https://wizzard262.github.io/showdown-board-game/ (was https://www.harriercarrier.com/showdown/index.html, which now forwards there) |
+| Website | https://wizzard262.github.io/future-city-battle/ (was https://www.harriercarrier.com/showdown/index.html, which now forwards there) |
 | App icon | `icon-512.png` |
 | Feature graphic | `feature-graphic.png` (1024 x 500) |
 | Phone screenshots | `screenshot-1.png` to `screenshot-4.png` (1620 x 1080) |
